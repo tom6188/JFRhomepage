@@ -187,3 +187,39 @@ ul {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ff4d4d' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+/* Mobile Navigation - Burger-Menü linksbündig und Marken-Text inline */
+@media (max-width: 767px) {
+  .navbar .container {
+    display: flex;
+    justify-content: flex-start; /* items start at left */
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  /* Ensure toggler is left and not pushed to the right */
+  .navbar-toggler {
+    margin: 0;
+    order: 0;
+  }
+
+  /* mobile brand sits directly after the toggler */
+  .navbar-brand {
+    margin: 0;
+    order: 1;
+    font-size: 1.25rem;
+    padding-left: 0;
+  }
+
+  /* Provide a compact mobile-brand text variant. By default show .mobile-brand-default. */
+  .mobile-brand-alt { display: none; }
+  .mobile-brand-default { display: inline; }
+
+  .navbar-collapse {
+    text-align: left;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* If you want the alternate text to appear instead, swap display rules here or in HTML */
+}
